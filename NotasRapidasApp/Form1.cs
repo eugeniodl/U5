@@ -9,7 +9,7 @@ namespace NotasRapidasApp
 
         private void GuardarNota(object sender, EventArgs e)
         {
-            MessageBox.Show("Nota guardada exitosamente.",
+            MessageBox.Show("Nota guardada exitosamente",
                 "Guardar", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
@@ -29,7 +29,7 @@ namespace NotasRapidasApp
             {
                 LimpiarNota(sender, e);
             }
-            else if (e.Control && e.KeyCode == Keys.Q) // Cerrar con CtrL+Q
+            else if (e.Control && e.KeyCode == Keys.Q) // Cerrar con Ctrl+Q
             {
                 Close();
             }
@@ -43,33 +43,33 @@ namespace NotasRapidasApp
         }
 
         // Variables para arrastrar el cuadro de texto
-        private Point puntoInicial;
-        private bool arrastrando = false;
+        private Point _puntoInicial;
+        private bool _arrastrando = false;
 
-        // Iniciar arrastre al presionar el botón izquierdo del mouse
+        // Inicar arrastre al presionar el botón izquierdo del mouse
         private void IniciarArrastre(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                arrastrando = true;
-                puntoInicial = e.Location;
+                _arrastrando = true;
+                _puntoInicial = e.Location;
             }
         }
 
         // Mover el cuadro de texto mientras se arrastra
         private void ArrastrarControl(object sender, MouseEventArgs e)
         {
-            if (arrastrando)
+            if (_arrastrando)
             {
-                txtNota.Left += e.X - puntoInicial.X;
-                txtNota.Top += e.Y - puntoInicial.Y;
+                txtNota.Left += e.X - _puntoInicial.X;
+                txtNota.Top += e.Y - _puntoInicial.Y;
             }
         }
 
-        // Terminar el arrastre al soltar el bot{on izquierdo del mouse
-        private void txtNota_MouseUp(object sender, MouseEventArgs e)
+        // Terminar el arrastre al soltar el botón izquierdo del mouse
+        private void TerminarArrastre(object sender, MouseEventArgs e)
         {
-            arrastrando = false;
+            _arrastrando = false;
         }
     }
 }

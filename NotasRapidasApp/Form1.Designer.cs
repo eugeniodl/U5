@@ -37,23 +37,23 @@
             // 
             txtNota.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtNota.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNota.Location = new Point(108, 30);
+            txtNota.Location = new Point(81, 38);
             txtNota.Multiline = true;
             txtNota.Name = "txtNota";
-            txtNota.Size = new Size(581, 292);
+            txtNota.Size = new Size(633, 285);
             txtNota.TabIndex = 0;
             txtNota.DoubleClick += DestacarNota;
             txtNota.MouseDown += IniciarArrastre;
             txtNota.MouseMove += ArrastrarControl;
-            txtNota.MouseUp += txtNota_MouseUp;
+            txtNota.MouseUp += TerminarArrastre;
             // 
             // btnGuardar
             // 
             btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuardar.Location = new Point(156, 352);
+            btnGuardar.Location = new Point(130, 368);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(154, 49);
+            btnGuardar.Size = new Size(174, 36);
             btnGuardar.TabIndex = 1;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             // 
             btnLimpiar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnLimpiar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLimpiar.Location = new Point(484, 352);
+            btnLimpiar.Location = new Point(497, 368);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(154, 49);
+            btnLimpiar.Size = new Size(174, 36);
             btnLimpiar.TabIndex = 2;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;

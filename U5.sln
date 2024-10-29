@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{9F87CDD3-7564-4BAF-AE03-92628064D320}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{7A02B86C-10F7-45CA-8388-5C850CFD9FD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A02B86C-10F7-45CA-8388-5C850CFD9FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A02B86C-10F7-45CA-8388-5C850CFD9FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A02B86C-10F7-45CA-8388-5C850CFD9FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A02B86C-10F7-45CA-8388-5C850CFD9FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F8E21F40-B94A-4BAF-A818-C3B70B502EF2}
+		SolutionGuid = {EAEA53EC-5A76-48D9-A25B-A16F7C8BA20F}
 	EndGlobalSection
 EndGlobal
