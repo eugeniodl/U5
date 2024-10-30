@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtNota = new TextBox();
             btnGuardar = new Button();
             btnLimpiar = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // txtNota
@@ -56,6 +58,7 @@
             btnGuardar.Size = new Size(174, 36);
             btnGuardar.TabIndex = 1;
             btnGuardar.Text = "Guardar";
+            toolTip1.SetToolTip(btnGuardar, "Guardar Nota (Ctrl+S)");
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += GuardarNota;
             // 
@@ -68,6 +71,7 @@
             btnLimpiar.Size = new Size(174, 36);
             btnLimpiar.TabIndex = 2;
             btnLimpiar.Text = "Limpiar";
+            toolTip1.SetToolTip(btnLimpiar, "Limpiar Nota (Ctrl+L)");
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += LimpiarNota;
             // 
@@ -92,5 +96,6 @@
         private TextBox txtNota;
         private Button btnGuardar;
         private Button btnLimpiar;
+        private ToolTip toolTip1;
     }
 }
