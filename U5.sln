@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{9F87CDD3-7564-4BAF-AE03-92628064D320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{9F87CDD3-7564-4BAF-AE03-92628064D320}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorDeTareas", "GestorDeTareas\GestorDeTareas.csproj", "{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F87CDD3-7564-4BAF-AE03-92628064D320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
