@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtNota = new TextBox();
             btnGuardar = new Button();
             btnLimpiar = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // txtNota
             // 
             txtNota.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtNota.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNota.Location = new Point(108, 30);
+            txtNota.Location = new Point(27, 12);
             txtNota.Multiline = true;
             txtNota.Name = "txtNota";
-            txtNota.Size = new Size(581, 292);
+            txtNota.Size = new Size(439, 253);
             txtNota.TabIndex = 0;
             txtNota.DoubleClick += DestacarNota;
             txtNota.MouseDown += IniciarArrastre;
             txtNota.MouseMove += ArrastrarControl;
-            txtNota.MouseUp += txtNota_MouseUp;
+            txtNota.MouseUp += TerminarArrastre;
             // 
             // btnGuardar
             // 
             btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuardar.Location = new Point(156, 352);
+            btnGuardar.Location = new Point(64, 283);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(154, 49);
+            btnGuardar.Size = new Size(145, 44);
             btnGuardar.TabIndex = 1;
             btnGuardar.Text = "Guardar";
+            toolTip1.SetToolTip(btnGuardar, "Guardar Nota (Ctrl+S)");
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += GuardarNota;
             // 
             // btnLimpiar
             // 
             btnLimpiar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnLimpiar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLimpiar.Location = new Point(484, 352);
+            btnLimpiar.Location = new Point(298, 283);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(154, 49);
+            btnLimpiar.Size = new Size(145, 44);
             btnLimpiar.TabIndex = 2;
             btnLimpiar.Text = "Limpiar";
+            toolTip1.SetToolTip(btnLimpiar, "Limpiar Nota (Ctrl+L)");
             btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += LimpiarNota;
             // 
@@ -75,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(504, 350);
             Controls.Add(btnLimpiar);
             Controls.Add(btnGuardar);
             Controls.Add(txtNota);
@@ -92,5 +93,6 @@
         private TextBox txtNota;
         private Button btnGuardar;
         private Button btnLimpiar;
+        private ToolTip toolTip1;
     }
 }

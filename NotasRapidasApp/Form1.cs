@@ -29,7 +29,7 @@ namespace NotasRapidasApp
             {
                 LimpiarNota(sender, e);
             }
-            else if (e.Control && e.KeyCode == Keys.Q) // Cerrar con CtrL+Q
+            else if (e.Control && e.KeyCode == Keys.Q) // Cerrar con Ctrl+Q
             {
                 Close();
             }
@@ -46,7 +46,7 @@ namespace NotasRapidasApp
         private Point puntoInicial;
         private bool arrastrando = false;
 
-        // Iniciar arrastre al presionar el botón izquierdo del mouse
+        // Iniciar arrastre al presionar el botón izquierdo del ratón
         private void IniciarArrastre(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -56,7 +56,7 @@ namespace NotasRapidasApp
             }
         }
 
-        // Mover el cuadro de texto mientras se arrastra
+        // Mover el cuadro de texto miemtras se arrastra
         private void ArrastrarControl(object sender, MouseEventArgs e)
         {
             if (arrastrando)
@@ -66,8 +66,8 @@ namespace NotasRapidasApp
             }
         }
 
-        // Terminar el arrastre al soltar el bot{on izquierdo del mouse
-        private void txtNota_MouseUp(object sender, MouseEventArgs e)
+        // Terminar el arrastre al soltar el botón izquierdo del mouse
+        private void TerminarArrastre(object sender, MouseEventArgs e)
         {
             arrastrando = false;
         }
