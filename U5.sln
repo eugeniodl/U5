@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{9F87CDD3-7564-4BAF-AE03-92628064D320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorDeTareas", "GestorDeTareas\GestorDeTareas.csproj", "{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorDeTareas", "GestorDeTareas\GestorDeTareas.csproj", "{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeReservas", "SistemaDeReservas\SistemaDeReservas.csproj", "{F7251FC0-1E99-473B-8960-C9F0372D2D12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA1B2E1B-D788-4288-A4B7-9DB1248255CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7251FC0-1E99-473B-8960-C9F0372D2D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7251FC0-1E99-473B-8960-C9F0372D2D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7251FC0-1E99-473B-8960-C9F0372D2D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7251FC0-1E99-473B-8960-C9F0372D2D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

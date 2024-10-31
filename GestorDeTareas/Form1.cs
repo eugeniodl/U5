@@ -7,6 +7,8 @@ namespace GestorDeTareas
         public Form1()
         {
             InitializeComponent();
+
+            toolStripStatusLabel1.Text = string.Empty;
         }
 
         private void Salir(object sender, EventArgs e)
@@ -23,29 +25,53 @@ namespace GestorDeTareas
             {
                 _tareas.Add(nuevaTarea);
                 lstTareas.Items.Add(nuevaTarea);
+                ActualizarEstado("Tarea agregada");
             }
         }
 
         private void EditarTarea(object sender, EventArgs e)
         {
-            if(lstTareas.SelectedItem != null)
+            if (lstTareas.SelectedItem != null)
             {
                 string tareaActual = lstTareas.SelectedItem.ToString();
                 string tareaEditada = Prompt.ShowDialog("Editar tarea:",
                     "Editar Tarea", tareaActual);
-                if(!string.IsNullOrEmpty(tareaEditada))
+                if (!string.IsNullOrEmpty(tareaEditada))
                 {
                     int index = lstTareas.SelectedIndex;
                     _tareas[index] = tareaEditada;
                     lstTareas.Items[index] = tareaEditada;
+                    ActualizarEstado("Tarea editada");
                 }
             }
             else
             {
                 MessageBox.Show("Seleccione una tarea para editar",
-                    "Advetencia", MessageBoxButtons.OK, 
+                    "Advetencia", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
+        }
+
+        private void EliminarTarea(object sender, EventArgs e)
+        {
+            if (lstTareas.SelectedItem != null)
+            {
+                int index = lstTareas.SelectedIndex;
+                _tareas.RemoveAt(index);
+                lstTareas.Items.RemoveAt(index);
+                ActualizarEstado("Tarea eliminada");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una tarea para eliminar",
+                    "Advetencia", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ActualizarEstado(string mensaje)
+        {
+            toolStripStatusLabel1.Text = mensaje;
         }
     }
 
@@ -59,7 +85,7 @@ namespace GestorDeTareas
                 Width = 400,
                 Height = 150,
                 FormBorderStyle = FormBorderStyle.FixedDialog,
-                Text = texto,
+                Text = titulo,
                 StartPosition = FormStartPosition.CenterScreen
             };
             Label lblTexto = new Label()
@@ -73,6 +99,7 @@ namespace GestorDeTareas
             {
                 Left = 20,
                 Top = 50,
+                Width = 350,
                 Text = valorInicial
             };
             Button btnConfirmation = new Button()
