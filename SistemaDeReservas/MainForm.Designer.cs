@@ -1,6 +1,6 @@
 ﻿namespace SistemaDeReservas
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -51,6 +51,7 @@
             // 
             splitContainer.Dock = DockStyle.Fill;
             splitContainer.Location = new Point(0, 0);
+            splitContainer.Margin = new Padding(3, 4, 3, 4);
             splitContainer.Name = "splitContainer";
             // 
             // splitContainer.Panel1
@@ -61,17 +62,19 @@
             // splitContainer.Panel2
             // 
             splitContainer.Panel2.Controls.Add(tabControlCentral);
-            splitContainer.Size = new Size(800, 450);
-            splitContainer.SplitterDistance = 200;
+            splitContainer.Size = new Size(782, 553);
+            splitContainer.SplitterDistance = 195;
+            splitContainer.SplitterWidth = 5;
             splitContainer.TabIndex = 0;
             // 
             // panelMenu
             // 
             panelMenu.Controls.Add(groupBoxMenu);
             panelMenu.Dock = DockStyle.Top;
-            panelMenu.Location = new Point(0, 30);
+            panelMenu.Location = new Point(0, 40);
+            panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(200, 323);
+            panelMenu.Size = new Size(195, 431);
             panelMenu.TabIndex = 1;
             panelMenu.Visible = false;
             // 
@@ -82,8 +85,10 @@
             groupBoxMenu.Controls.Add(btnReservar);
             groupBoxMenu.Dock = DockStyle.Top;
             groupBoxMenu.Location = new Point(0, 0);
+            groupBoxMenu.Margin = new Padding(3, 4, 3, 4);
             groupBoxMenu.Name = "groupBoxMenu";
-            groupBoxMenu.Size = new Size(200, 106);
+            groupBoxMenu.Padding = new Padding(3, 4, 3, 4);
+            groupBoxMenu.Size = new Size(195, 141);
             groupBoxMenu.TabIndex = 0;
             groupBoxMenu.TabStop = false;
             groupBoxMenu.Text = "Menú de Reservas";
@@ -91,19 +96,22 @@
             // btnSalir
             // 
             btnSalir.Dock = DockStyle.Top;
-            btnSalir.Location = new Point(3, 65);
+            btnSalir.Location = new Point(3, 86);
+            btnSalir.Margin = new Padding(3, 4, 3, 4);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(194, 23);
+            btnSalir.Size = new Size(189, 31);
             btnSalir.TabIndex = 2;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += Salir;
             // 
             // btnVerReservas
             // 
             btnVerReservas.Dock = DockStyle.Top;
-            btnVerReservas.Location = new Point(3, 42);
+            btnVerReservas.Location = new Point(3, 55);
+            btnVerReservas.Margin = new Padding(3, 4, 3, 4);
             btnVerReservas.Name = "btnVerReservas";
-            btnVerReservas.Size = new Size(194, 23);
+            btnVerReservas.Size = new Size(189, 31);
             btnVerReservas.TabIndex = 1;
             btnVerReservas.Text = "Ver Reservas";
             btnVerReservas.UseVisualStyleBackColor = true;
@@ -111,19 +119,22 @@
             // btnReservar
             // 
             btnReservar.Dock = DockStyle.Top;
-            btnReservar.Location = new Point(3, 19);
+            btnReservar.Location = new Point(3, 24);
+            btnReservar.Margin = new Padding(3, 4, 3, 4);
             btnReservar.Name = "btnReservar";
-            btnReservar.Size = new Size(194, 23);
+            btnReservar.Size = new Size(189, 31);
             btnReservar.TabIndex = 0;
             btnReservar.Text = "Reservar";
             btnReservar.UseVisualStyleBackColor = true;
+            btnReservar.Click += Reservar;
             // 
             // btnHamburguesa
             // 
             btnHamburguesa.Dock = DockStyle.Top;
             btnHamburguesa.Location = new Point(0, 0);
+            btnHamburguesa.Margin = new Padding(3, 4, 3, 4);
             btnHamburguesa.Name = "btnHamburguesa";
-            btnHamburguesa.Size = new Size(200, 30);
+            btnHamburguesa.Size = new Size(195, 40);
             btnHamburguesa.TabIndex = 0;
             btnHamburguesa.Text = "≡";
             btnHamburguesa.UseVisualStyleBackColor = true;
@@ -135,38 +146,42 @@
             tabControlCentral.Controls.Add(tabPage2);
             tabControlCentral.Dock = DockStyle.Fill;
             tabControlCentral.Location = new Point(0, 0);
+            tabControlCentral.Margin = new Padding(3, 4, 3, 4);
             tabControlCentral.Name = "tabControlCentral";
             tabControlCentral.SelectedIndex = 0;
-            tabControlCentral.Size = new Size(596, 450);
+            tabControlCentral.Size = new Size(582, 553);
             tabControlCentral.TabIndex = 0;
             // 
             // tabPage1
             // 
-            tabPage1.Location = new Point(4, 24);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Margin = new Padding(3, 4, 3, 4);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(588, 422);
+            tabPage1.Padding = new Padding(3, 4, 3, 4);
+            tabPage1.Size = new Size(574, 520);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Reservar";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Margin = new Padding(3, 4, 3, 4);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(588, 422);
+            tabPage2.Padding = new Padding(3, 4, 3, 4);
+            tabPage2.Size = new Size(574, 520);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Ver Reservas";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(782, 553);
             Controls.Add(splitContainer);
-            Name = "Form1";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MainForm";
             Text = "Sistema de Reservas";
             splitContainer.Panel1.ResumeLayout(false);
             splitContainer.Panel2.ResumeLayout(false);
