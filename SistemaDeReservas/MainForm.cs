@@ -57,14 +57,25 @@ namespace SistemaDeReservas
             // Muestra el formulario para ver reservas en una pestaña
 
             // Verifica si hay un formulario de reservas creado para 
-            // obtner la lista de reservas
+            // obtener la lista de reservas
             if(formReservar == null)
             {
                 MessageBox.Show("Debe crear una reserva antes de visualizarla.",
                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            var formVerReservas = new FormVerReservas();
+
+            List<Reserva> reservas = formReservar.ObtenerListaReservas();
+
+            // Verifica si hay reservas antes de mostrar el formulario de visualización
+            if(reservas.Count == 0)
+            {
+                MessageBox.Show("No hay reservas para mostrar.", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var formVerReservas = new FormVerReservas(reservas);
             MostrarFormularioEnTabPage(formVerReservas, tabPage2);
         }
     }
