@@ -36,6 +36,8 @@
             dtpFecha = new DateTimePicker();
             label4 = new Label();
             cmbTipoHabitacion = new ComboBox();
+            label5 = new Label();
+            mtbTelefono = new MaskedTextBox();
             btnGuardar = new Button();
             flowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -50,6 +52,8 @@
             flowLayoutPanel.Controls.Add(dtpFecha);
             flowLayoutPanel.Controls.Add(label4);
             flowLayoutPanel.Controls.Add(cmbTipoHabitacion);
+            flowLayoutPanel.Controls.Add(label5);
+            flowLayoutPanel.Controls.Add(mtbTelefono);
             flowLayoutPanel.Controls.Add(btnGuardar);
             flowLayoutPanel.Dock = DockStyle.Fill;
             flowLayoutPanel.FlowDirection = FlowDirection.TopDown;
@@ -57,7 +61,7 @@
             flowLayoutPanel.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel.Name = "flowLayoutPanel";
             flowLayoutPanel.Padding = new Padding(31, 36, 31, 36);
-            flowLayoutPanel.Size = new Size(412, 442);
+            flowLayoutPanel.Size = new Size(417, 480);
             flowLayoutPanel.TabIndex = 0;
             // 
             // label1
@@ -97,7 +101,7 @@
             label3.Location = new Point(33, 158);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Padding = new Padding(5, 5, 5, 5);
+            label3.Padding = new Padding(5);
             label3.Size = new Size(136, 30);
             label3.TabIndex = 3;
             label3.Text = "Fecha de Reserva:";
@@ -116,7 +120,7 @@
             label4.Location = new Point(33, 221);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Padding = new Padding(5, 5, 5, 5);
+            label4.Padding = new Padding(5);
             label4.Size = new Size(150, 30);
             label4.TabIndex = 5;
             label4.Text = "Tipo de Habitación:";
@@ -130,13 +134,33 @@
             cmbTipoHabitacion.Size = new Size(147, 28);
             cmbTipoHabitacion.TabIndex = 6;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(34, 285);
+            label5.Name = "label5";
+            label5.Padding = new Padding(5);
+            label5.Size = new Size(80, 30);
+            label5.TabIndex = 7;
+            label5.Text = "Teléfono:";
+            // 
+            // mtbTelefono
+            // 
+            mtbTelefono.Location = new Point(34, 318);
+            mtbTelefono.Mask = "(999)000-0000";
+            mtbTelefono.Name = "mtbTelefono";
+            mtbTelefono.Size = new Size(125, 27);
+            mtbTelefono.TabIndex = 8;
+            mtbTelefono.Validating += mtbTelefono_Validating;
+            mtbTelefono.Validated += mtbTelefono_Validated;
+            // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(45, 301);
+            btnGuardar.Location = new Point(45, 364);
             btnGuardar.Margin = new Padding(14, 16, 14, 16);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(109, 51);
-            btnGuardar.TabIndex = 7;
+            btnGuardar.TabIndex = 9;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += Guardar;
@@ -145,7 +169,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(412, 442);
+            ClientSize = new Size(417, 480);
             Controls.Add(flowLayoutPanel);
             Margin = new Padding(2, 3, 2, 3);
             Name = "FormReservar";
@@ -166,5 +190,7 @@
         private Label label4;
         private ComboBox cmbTipoHabitacion;
         private Button btnGuardar;
+        private Label label5;
+        private MaskedTextBox mtbTelefono;
     }
 }
