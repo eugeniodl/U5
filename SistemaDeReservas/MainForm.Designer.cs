@@ -103,6 +103,7 @@
             btnSalir.TabIndex = 2;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += Salir;
             // 
             // btnVerReservas
             // 
@@ -114,6 +115,7 @@
             btnVerReservas.TabIndex = 1;
             btnVerReservas.Text = "Ver Reservas";
             btnVerReservas.UseVisualStyleBackColor = true;
+            btnVerReservas.Click += VerReservas;
             // 
             // btnReservar
             // 
@@ -169,7 +171,7 @@
             tabPage2.Margin = new Padding(3, 4, 3, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 4, 3, 4);
-            tabPage2.Size = new Size(674, 567);
+            tabPage2.Size = new Size(575, 520);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Ver Reservas";
             tabPage2.UseVisualStyleBackColor = true;
