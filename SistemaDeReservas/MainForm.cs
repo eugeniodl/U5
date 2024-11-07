@@ -44,13 +44,35 @@ namespace SistemaDeReservas
             // Cierra la aplicación con confirmación
             DialogResult result =
                 MessageBox.Show("¿Está seguro de que desea salir?",
-                "Confirmación", MessageBoxButtons.YesNo, 
+                "Confirmación", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 Close();
             }
+        }
+
+        private void VerReservas(object sender, EventArgs e)
+        {
+            if(formReservar == null)
+            {
+                MessageBox.Show("Debe crear una reserva antes de visualizarla.", 
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            List<Reserva> reservas = formReservar.ObtenerReservas();
+
+            if(reservas.Count == 0)
+            {
+                MessageBox.Show("No hay reservas para mostrar.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var formVerReservas = new FormVerReservas(reservas);
+            MostrarFormularioEnTabPage(formVerReservas, tabPage2);
         }
     }
 }

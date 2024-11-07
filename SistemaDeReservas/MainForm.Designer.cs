@@ -115,6 +115,7 @@
             btnVerReservas.TabIndex = 1;
             btnVerReservas.Text = "Ver Reservas";
             btnVerReservas.UseVisualStyleBackColor = true;
+            btnVerReservas.Click += VerReservas;
             // 
             // btnReservar
             // 
