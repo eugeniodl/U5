@@ -36,6 +36,8 @@
             dtpFecha = new DateTimePicker();
             label4 = new Label();
             cmbTipoHabitacion = new ComboBox();
+            label5 = new Label();
+            mtbTelefono = new MaskedTextBox();
             btnGuardar = new Button();
             flowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -50,6 +52,8 @@
             flowLayoutPanel.Controls.Add(dtpFecha);
             flowLayoutPanel.Controls.Add(label4);
             flowLayoutPanel.Controls.Add(cmbTipoHabitacion);
+            flowLayoutPanel.Controls.Add(label5);
+            flowLayoutPanel.Controls.Add(mtbTelefono);
             flowLayoutPanel.Controls.Add(btnGuardar);
             flowLayoutPanel.Dock = DockStyle.Fill;
             flowLayoutPanel.FlowDirection = FlowDirection.TopDown;
@@ -108,7 +112,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(26, 225);
+            label4.Location = new Point(26, 218);
             label4.Name = "label4";
             label4.Padding = new Padding(7);
             label4.Size = new Size(154, 34);
@@ -118,18 +122,38 @@
             // cmbTipoHabitacion
             // 
             cmbTipoHabitacion.FormattingEnabled = true;
-            cmbTipoHabitacion.Location = new Point(26, 262);
+            cmbTipoHabitacion.Location = new Point(26, 255);
             cmbTipoHabitacion.Name = "cmbTipoHabitacion";
             cmbTipoHabitacion.Size = new Size(250, 28);
             cmbTipoHabitacion.TabIndex = 6;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(26, 286);
+            label5.Name = "label5";
+            label5.Padding = new Padding(7);
+            label5.Size = new Size(84, 34);
+            label5.TabIndex = 7;
+            label5.Text = "Teléfono:";
+            // 
+            // mtbTelefono
+            // 
+            mtbTelefono.Location = new Point(26, 323);
+            mtbTelefono.Mask = "(999)000-0000";
+            mtbTelefono.Name = "mtbTelefono";
+            mtbTelefono.Size = new Size(250, 27);
+            mtbTelefono.TabIndex = 8;
+            mtbTelefono.Validating += mtbTelefono_Validating;
+            mtbTelefono.Validated += mtbTelefono_Validated;
+            // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(34, 311);
+            btnGuardar.Location = new Point(34, 364);
             btnGuardar.Margin = new Padding(11);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(126, 53);
-            btnGuardar.TabIndex = 7;
+            btnGuardar.TabIndex = 9;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += Guardar;
@@ -159,5 +183,7 @@
         private Label label4;
         private ComboBox cmbTipoHabitacion;
         private Button btnGuardar;
+        private Label label5;
+        private MaskedTextBox mtbTelefono;
     }
 }
