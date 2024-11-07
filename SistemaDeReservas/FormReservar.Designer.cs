@@ -36,6 +36,8 @@
             dtpFecha = new DateTimePicker();
             label4 = new Label();
             cmbTipoHabitacion = new ComboBox();
+            label5 = new Label();
+            mtbTelefono = new MaskedTextBox();
             btnGuardar = new Button();
             flowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -50,6 +52,8 @@
             flowLayoutPanel.Controls.Add(dtpFecha);
             flowLayoutPanel.Controls.Add(label4);
             flowLayoutPanel.Controls.Add(cmbTipoHabitacion);
+            flowLayoutPanel.Controls.Add(label5);
+            flowLayoutPanel.Controls.Add(mtbTelefono);
             flowLayoutPanel.Controls.Add(btnGuardar);
             flowLayoutPanel.Dock = DockStyle.Fill;
             flowLayoutPanel.FlowDirection = FlowDirection.TopDown;
@@ -57,7 +61,7 @@
             flowLayoutPanel.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel.Name = "flowLayoutPanel";
             flowLayoutPanel.Padding = new Padding(23, 27, 23, 27);
-            flowLayoutPanel.Size = new Size(421, 415);
+            flowLayoutPanel.Size = new Size(430, 483);
             flowLayoutPanel.TabIndex = 0;
             // 
             // label1
@@ -127,13 +131,33 @@
             cmbTipoHabitacion.Size = new Size(228, 28);
             cmbTipoHabitacion.TabIndex = 6;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(26, 298);
+            label5.Name = "label5";
+            label5.Padding = new Padding(7);
+            label5.Size = new Size(84, 34);
+            label5.TabIndex = 7;
+            label5.Text = "Teléfono:";
+            // 
+            // mtbTelefono
+            // 
+            mtbTelefono.Location = new Point(26, 335);
+            mtbTelefono.Mask = "(999)000-0000";
+            mtbTelefono.Name = "mtbTelefono";
+            mtbTelefono.Size = new Size(228, 27);
+            mtbTelefono.TabIndex = 8;
+            mtbTelefono.Validating += mtbTelefono_Validating;
+            mtbTelefono.Validated += mtbTelefono_Validated;
+            // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(34, 311);
+            btnGuardar.Location = new Point(34, 378);
             btnGuardar.Margin = new Padding(11, 13, 11, 13);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(114, 40);
-            btnGuardar.TabIndex = 7;
+            btnGuardar.TabIndex = 9;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += Guardar;
@@ -142,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(421, 415);
+            ClientSize = new Size(430, 483);
             Controls.Add(flowLayoutPanel);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormReservar";
@@ -163,5 +187,7 @@
         private Label label4;
         private ComboBox cmbTipoHabitacion;
         private Button btnGuardar;
+        private Label label5;
+        private MaskedTextBox mtbTelefono;
     }
 }
