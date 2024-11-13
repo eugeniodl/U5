@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificacionesApp", "Notifi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotasRapidasApp", "NotasRapidasApp\NotasRapidasApp.csproj", "{40DB0C1E-D195-46C4-B057-CFDD8077E059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservaHabitacionApp", "ReservaHabitacionApp\ReservaHabitacionApp.csproj", "{32ADC407-F983-4B6E-B360-739E29AB6CC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{40DB0C1E-D195-46C4-B057-CFDD8077E059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40DB0C1E-D195-46C4-B057-CFDD8077E059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40DB0C1E-D195-46C4-B057-CFDD8077E059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32ADC407-F983-4B6E-B360-739E29AB6CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32ADC407-F983-4B6E-B360-739E29AB6CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ADC407-F983-4B6E-B360-739E29AB6CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32ADC407-F983-4B6E-B360-739E29AB6CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
