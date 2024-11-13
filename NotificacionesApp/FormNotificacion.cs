@@ -82,9 +82,9 @@ namespace NotificacionesApp
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string[] configuracion 
+                string[] configuracion
                     = File.ReadAllLines(openFileDialog.FileName);
                 AplicarConfiguracion(configuracion);
                 MessageBox.Show("Configuración cargada exitosamente,", "Información",
@@ -94,7 +94,52 @@ namespace NotificacionesApp
 
         private void AplicarConfiguracion(string[] configuracion)
         {
-            throw new NotImplementedException();
+            chkNotificaciones.Checked = configuracion.Contains("Notificaciones: Sí");
+            chkBoletin.Checked = configuracion.Contains("Boletín: Sí");
+            rbtnEstudiante.Checked = configuracion.Contains("Tipo de Usuario: Estudiante");
+            rbtnProfesional.Checked = configuracion.Contains("Tipo de Usuario: Profesional");
+
+            string categoria = configuracion
+                .FirstOrDefault(line => line
+                .StartsWith("Categoría Principal: "))?.Split(':')[1].Trim();
+            if(!string.IsNullOrEmpty(categoria) && cmbCategoria.Items.Contains(categoria))
+            {
+                cmbCategoria.SelectedItem = categoria;
+            }
+
+            string categoriasSeleccionadas = configuracion
+                .FirstOrDefault(line => line
+                .StartsWith("Categorías de Notificación: "))?.Split(':')[1].Trim();
+
+            if(!string.IsNullOrEmpty(categoriasSeleccionadas))
+            {
+                foreach (string categoriaSeleccionada in categoriasSeleccionadas.Split(',')
+                    .Select(c => c.Trim()))
+                {
+                    int index = lstCategorias.Items.IndexOf(categoriaSeleccionada);
+                    if(index >= 0)
+                    {
+                        lstCategorias.SetSelected(index, true);
+                    }
+                }
+            }
+
+            string opcionesAdicionales = configuracion
+                .FirstOrDefault(line => line
+                .StartsWith("Opciones Adicionales: "))?.Split(":")[1].Trim();
+
+            if(!string.IsNullOrEmpty(opcionesAdicionales))
+            {
+                foreach (string opcion in opcionesAdicionales.Split(',').Select(op => op.Trim()))
+                {
+                    int index = clbOpcionesAdicionales.Items.IndexOf(opcion);
+                    if(index >= 0)
+                    {
+                        clbOpcionesAdicionales.SetItemChecked(index, true);
+                    }
+                }
+            }
+
         }
     }
 }
