@@ -3,6 +3,7 @@
     public string Texto { get; set; }
     public TipoRespuesta TipoRespuesta { get; set; }
     public bool Estado { get; set; }
+    public int Ponderacion {  get; set; }
 }
 public enum TipoRespuesta
 {
