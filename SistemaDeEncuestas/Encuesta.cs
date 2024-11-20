@@ -15,13 +15,15 @@
                     {
                         Texto = "¿Cuál es su país de residencia?",
                         TipoRespuesta = TipoRespuesta.Unica,
-                        Estado = false
+                        Estado = false,
+                        Ponderacion = 5
                     },
                     new Pregunta
                     {
                         Texto = "¿En qué rango de edad se encuentra?",
                         TipoRespuesta = TipoRespuesta.Unica,
-                        Estado = false
+                        Estado = false,
+                        Ponderacion = 5
                     }
                 }
             },
@@ -34,13 +36,15 @@
                     {
                         Texto = "Califique la calidad del producto",
                         TipoRespuesta = TipoRespuesta.Multiple,
-                        Estado = false
+                        Estado = false,
+                        Ponderacion = 7
                     },
                     new Pregunta
                     {
                         Texto = "Califique el servicio al cliente",
                         TipoRespuesta = TipoRespuesta.Multiple,
-                        Estado = false
+                        Estado = false,
+                        Ponderacion = 8
                     }
                 }
             },
@@ -53,7 +57,8 @@
                     {
                         Texto = "¿Agregaría algún comentario adicional?",
                         TipoRespuesta = TipoRespuesta.Unica,
-                        Estado = false
+                        Estado = false,
+                        Ponderacion = 10
                     }
                 }
             }
